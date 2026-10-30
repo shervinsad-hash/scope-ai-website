@@ -52,3 +52,12 @@ The original site received JavaScript syntax checks, responsive layout inspectio
 This export includes the original SVG favicon and typographic website brand treatment. The separately generated PNG logo is not included or installed in this version.
 
 Email delivery has not been tested because the mailbox is not provisioned.
+
+## Insights
+
+- `dist/insights/ai-enabled-sdlc/index.html`: public article, “Faster code. Better delivery?”
+- `dist/insights/ai-enabled-sdlc/article.css`: scoped article styling
+- Homepage navigation, approach link and Insights section point to the article.
+- Knowledge foundation: https://github.com/shervinsad-hash/scope-ai-knowledge/blob/main/engineering/ai-enabled-sdlc-case.md
+
+The article preserves the existing noindex setting. Source and claim boundaries are recorded in the article. GitHub source updates rely on the existing Netlify connection for deployment; the private Sites deployment remains separate.
