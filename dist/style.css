@@ -3,3 +3,6 @@
 .hero-grid{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)}
 @media(min-width:721px) and (max-width:1000px){.hero h1{font-size:46px}.diagram-caption{flex-wrap:wrap;gap:6px}.diagram-caption span:last-child{margin-left:0}.arch-layout{grid-template-columns:1fr 1fr}.node{width:130px}.node strong{font-size:11px}.arch-map{height:420px}.arch-center{width:95px;height:95px}.arch-center em{font-size:20px}}
 @media(max-width:720px){.hero-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* Insights article index */
+.insight-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px}.insight-item{border-top:2px solid var(--teal);padding-top:25px}.insight-item h3{font-size:clamp(25px,2.8vw,35px);margin-bottom:16px}.insight-item p{font-size:14px;max-width:520px}.insight-item .text-link{display:inline-block;margin-top:8px}@media(max-width:720px){.insight-list{grid-template-columns:1fr;gap:38px}}
