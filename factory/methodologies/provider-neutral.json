@@ -1,0 +1,28 @@
+{
+  "name": "provider-neutral",
+  "version": "2.0.0",
+  "defaultMode": "dry-run",
+  "startingInput": {
+    "requirement": "High-level statement of the desired outcome.",
+    "scope": "Explicit in-scope and out-of-scope boundaries."
+  },
+  "adoptedTechniques": [
+    "specify-plan-tasks-implement sequence",
+    "human review gate after every artifact",
+    "prioritized independently testable user stories",
+    "explicit acceptance scenarios, edge cases, success criteria and assumptions",
+    "constitution or project-policy check before design",
+    "exact file ownership, dependency order and parallel-work markers",
+    "story checkpoints and requirements-to-evidence verification",
+    "unexecuted checks, limitations, cost and release ownership recorded"
+  ],
+  "optionalProjectInputs": ["constitution or project policy", "existing build and test commands", "repository structure"],
+  "stages": [
+    { "name": "intake", "pattern": "specify", "input": "high-level requirement and scope", "output": "prioritized, independently testable specification", "humanApprovalRequired": true },
+    { "name": "architecture", "pattern": "plan", "input": "approved specification", "output": "policy-checked plan and design", "humanApprovalRequired": true },
+    { "name": "tasks", "pattern": "tasks", "input": "approved plan and specification", "output": "owned, dependency-ordered stories", "humanApprovalRequired": true },
+    { "name": "candidate", "pattern": "implement", "input": "approved task/story", "output": "checkpoint-ready candidate change", "humanApprovalRequired": true },
+    { "name": "verification", "pattern": "review", "input": "approved candidate and acceptance criteria", "output": "requirements-to-evidence review", "humanApprovalRequired": true }
+  ],
+  "requiresHumanApprovalBefore": ["every-stage-transition", "live-provider", "publication", "merge", "release"]
+}

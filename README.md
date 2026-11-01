@@ -2,6 +2,19 @@
 
 Responsive website for Scope AI, an enterprise AI consultancy founded by Shervin Sadeghi.
 
+## Project delivery documents
+
+- [AI software factory: dry-run, workflows and operating instructions](factory/README.md)
+
+- [Delivery document map and methodology review](docs/delivery.md)
+- [Project constitution](.specify/memory/constitution.md)
+- [Intake business requirements and intent](specs/001-workflow-enquiry-intake/requirements.md)
+- [Intake specification and review decisions](specs/001-workflow-enquiry-intake/spec.md)
+- [Specification-quality checklist](specs/001-workflow-enquiry-intake/checklists/requirements.md)
+
+These describe proposed intake behavior and development authority. The contact behavior
+documented below remains the current implementation.
+
 ## Stack and files
 
 Buildless HTML, CSS and JavaScript. No dependencies or build step.
