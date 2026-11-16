@@ -8,3 +8,7 @@
 .insight-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px}.insight-item{border-top:2px solid var(--teal);padding-top:25px}.insight-item h3{font-size:clamp(25px,2.8vw,35px);margin-bottom:16px}.insight-item p{font-size:14px;max-width:520px}.insight-item .text-link{display:inline-block;margin-top:8px}@media(max-width:720px){.insight-list{grid-template-columns:1fr;gap:38px}}
 
 .enquiry-honeypot{display:none}#enquiry-status:empty{margin:0}#enquiry-status:focus{outline:3px solid #c77e4c;outline-offset:5px}
+
+
+/* Specification-driven engineering workflow within the wider change approach. */
+.sdd-method{margin-top:40px;padding:32px 0;border-top:1px solid #c7d1c5}.sdd-method h3{font-size:32px}.sdd-method>p{max-width:900px;font-size:14px}.sdd-method .eyebrow{font-size:10px}.sdd-method .fine{font-size:12px}.sdd-cycle{list-style:none;padding:0;margin:28px 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;counter-reset:sdd}.sdd-cycle li{border-top:2px solid var(--teal);padding-top:14px;counter-increment:sdd}.sdd-cycle li:before{content:'0' counter(sdd);display:block;font-size:10px;color:var(--teal);margin-bottom:10px}.sdd-cycle strong{display:block;font-weight:400;font-size:23px;line-height:1.2;margin-bottom:12px}.sdd-cycle span{display:block;color:var(--slate);font-size:13px;line-height:1.6}@media(max-width:720px){.sdd-cycle{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 18px}.sdd-method h3{font-size:29px}}
