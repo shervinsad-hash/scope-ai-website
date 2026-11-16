@@ -8,7 +8,7 @@ Buildless HTML, CSS and JavaScript. No dependencies or build step.
 
 - `dist/index.html`: homepage and contact form
 - `dist/style.css`: responsive styles
-- `dist/app.js`: architecture explorer, FAQs, mobile navigation and email draft
+- `dist/app.js`: architecture explorer, FAQs, mobile navigation and enquiry submission
 - `dist/favicon.svg`: brand icon
 - `netlify.toml`: Netlify publish-directory configuration
 
@@ -24,20 +24,30 @@ On this repository's GitHub page, choose **Code → Download ZIP**. Extract the 
 
 Import this repository into Netlify. Leave the build command empty and use `dist` as the publish directory. The included `netlify.toml` sets the publish directory.
 
+The source configures the `workflow-enquiry` form for Netlify Forms. During a separately authorized release, enable form detection for `scope-ai-web` and redeploy so Netlify processes the HTML in `dist`. Source metadata alone does not enable or verify the live service. Deployment, current settings, detected-form status and private persistence verification remain pending.
+
 Connect `scopeai.ca` in Netlify and apply the exact DNS values it provides at the domain's DNS provider. Domain registration is with GoDaddy. Preserve email DNS records when configuring the website.
 
 ## Contact behavior
 
-The form validates required fields and opens an email draft addressed to `info@scopeai.ca`. Visitors must send it from their email application. There is no server-side submission, database, analytics or automatic email delivery.
+The form preserves required Name, Work email and Workflow, with optional Company. Browser validation checks requiredness, email format and length limits; these are not trusted server-side guarantees. A hidden honeypot supports Netlify spam filtering, whose live behavior still needs verification.
 
-The owner has not yet provisioned the email mailbox. Set up and test the mailbox before a public launch. Automatic submissions require a separate implementation, such as Netlify Forms and email notifications; this repository does not yet enable Netlify Forms.
+With JavaScript, the form sends a same-origin URL-encoded POST to `/`, including the form identity and honeypot. Pending feedback disables Submit enquiry and prevents simultaneous requests. Only an HTTP ok response displays "Your enquiry has been submitted." This acknowledges the HTTP response; it does not establish private persistence, human receipt, review or email delivery. Spam rejection may be silent.
+
+All enhanced outcomes retain entered values. Non-ok responses explain that confirmation failed and a manual retry may duplicate a saved submission. Network errors or the 30-second client deadline explain that the outcome is unknown. Aborting the browser request does not prove server-side capture stopped. Controls are restored, errors receive focus, and there is no automatic retry or form reset.
+
+Without JavaScript (or required enhancement APIs), the HTML form uses native POST to `/` and the provider's default response. No custom success page is configured. Native response and failure/value-recovery behavior must be tested separately on the deployed site with JavaScript disabled; enhanced feedback checks cannot establish native behavior.
+
+Local static hosting cannot process Netlify Forms or prove private persistence. Controlled local HTTP responses can check feedback and encoding only. Before release acceptance, verify detected-form status and synthetic submissions on the deployed site, compare all four values in private Netlify Forms records, and check native POST, legitimate and populated-honeypot handling, accessibility and existing interactions. Keep enquiry data out of URLs, logs and public evidence. Deployment and private verification remain pending; no live readiness or production test result is claimed here.
+
+Shervin Sadeghi owns private submission access, manual enquiry review, spam-list review and follow-up. Accessing a matching private record establishes human receipt/access; an assessment or follow-up establishes review separately. Confirm the review cadence before release. Delete synthetic submissions after verification. Review real enquiries after 12 months and delete those no longer needed; retention is manual, with no automatic expiry. No notifications, CRM or automatic responses are configured. Direct email links remain available; mailbox receipt and email delivery are unverified and independent of Forms capture.
 
 ## Public launch checklist
 
 - Owner approves public launch and final copy.
 - Set up and verify the business mailbox and domain email authentication.
 - Configure the custom domain and HTTPS in the hosting provider.
-- Decide whether to retain email drafts or implement actual form submissions.
+- Enable form detection and redeploy during an authorized release; verify private capture, native response, spam handling and owner review access separately from HTTP acknowledgement.
 - Remove `noindex,nofollow` from the homepage only when ready for search indexing. This directive does not restrict access.
 - Test contact behavior and responsive layouts on the public domain.
 
@@ -51,7 +61,7 @@ The original site received JavaScript syntax checks, responsive layout inspectio
 
 This export includes the original SVG favicon and typographic website brand treatment. The separately generated PNG logo is not included or installed in this version.
 
-Email delivery has not been tested because the mailbox is not provisioned.
+WP-01 candidate syntax/browser verification belongs to the runner and is not claimed complete here. Production deployment, private persistence, native response and owner review verification remain pending. Mailbox receipt and email delivery are unverified.
 
 ## Insights
 
