@@ -6,3 +6,5 @@
 
 /* Insights article index */
 .insight-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px}.insight-item{border-top:2px solid var(--teal);padding-top:25px}.insight-item h3{font-size:clamp(25px,2.8vw,35px);margin-bottom:16px}.insight-item p{font-size:14px;max-width:520px}.insight-item .text-link{display:inline-block;margin-top:8px}@media(max-width:720px){.insight-list{grid-template-columns:1fr;gap:38px}}
+
+.enquiry-honeypot{display:none}#enquiry-status:empty{margin:0}#enquiry-status:focus{outline:3px solid #c77e4c;outline-offset:5px}
