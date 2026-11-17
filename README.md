@@ -71,3 +71,7 @@ WP-01 candidate syntax/browser verification belongs to the runner and is not cla
 - Knowledge foundation: https://github.com/shervinsad-hash/scope-ai-knowledge/blob/main/engineering/ai-enabled-sdlc-case.md
 
 The article preserves the existing noindex setting. Source and claim boundaries are recorded in the article. GitHub source updates rely on the existing Netlify connection for deployment; the private Sites deployment remains separate.
+
+## Unified delivery method (proposed)
+
+The homepage's Approach section explains the business-intent-to-solution lifecycle, bounded work packages, execution tasks/briefs, reusable AI harness, interchangeable coding-agent engine and evidence-based increment acceptance. The architecture is a proposed method, not a claim of a deployed multi-engine harness. Source: https://github.com/shervinsad-hash/scope-ai-knowledge/blob/main/delivery/software-increments/agentic-software-delivery-increments.md. Verify the preview and obtain release approval before public deployment.
